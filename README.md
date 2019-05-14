@@ -13,6 +13,7 @@ This project isnt intended to be anything useful. Its mostly just for me to lear
 
 Program settings, Remove all the comments before using.
 
+```json
 {
 	"AddedBrightness": 0,          // Adds brightness
 	"AddedSharpness": 1,           // Adds sharpness
@@ -23,3 +24,4 @@ Program settings, Remove all the comments before using.
 	"ExitAfterCompletion": true,   // Exits after running
 	"VerboseErrorOutput": false,   // Displays the raw exception data instead of just "ERROR: ..."
 }
+```
