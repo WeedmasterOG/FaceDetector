@@ -1,0 +1,10 @@
+{
+	"AddedBrightness": 0,
+	"AddedSharpness": 1,
+	"Flip": false,
+	"EffectMode": "normal",
+	"WallpaperFormat": "stretch",
+	"KeepOutputImage": false,
+	"ExitAfterCompletion": true,
+	"VerboseErrorOutput": false,
+}
