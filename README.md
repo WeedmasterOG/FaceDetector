@@ -11,6 +11,12 @@ This project isnt intended to be anything useful. Its mostly just for me to lear
 
 
 
+
+
+
+
+
+
 Program settings, Remove all the comments before using.
 
 ```Csharp
