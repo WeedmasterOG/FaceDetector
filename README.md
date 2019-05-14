@@ -10,14 +10,8 @@
 This project isnt intended to be anything useful. Its mostly just for me to learn face detection concepts and working with the Emgu(Open CV) library.
 
 
-
-
-
-
-
-
-
 Program settings, Remove all the comments before using.
+
 
 ```Csharp
 {
