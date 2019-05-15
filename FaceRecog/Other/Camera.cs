@@ -24,7 +24,8 @@ namespace FaceRecog
                 CConsole.Write("Letting camera calibrate itself", Color.SpringGreen);
 
                 // Let camera controller calibrate itself (exposure, color, sharnpess.. etc)
-                Thread.Sleep(2000);
+                // added an extra 500 - 1000 ms for slower machines
+                Thread.Sleep(2500);
 
                 CConsole.Write("Taking image", Color.SpringGreen);
 

@@ -11,16 +11,23 @@ namespace FaceRecog
             try
             {
                 return JsonConvert.DeserializeObject<SettingsFomatter>(input);
-            } catch (Exception ex)
+            } catch
             {
                 CConsole.Write("ERROR: Failed to load settings from json", Color.Red);
-                VerboseExceptionOutput.WriteExep(ex);
+
+                // Manually wait
+                Console.ReadLine();
+                // Settings failed to load, no need to call VerboseExeptionOutput
+                // Manually exit
+                Environment.Exit(0);
                 return null;
             }
         }
 
         public int AddedBrightness { get; set; }
         public int AddedSharpness { get; set; }
+        public string Overlay { get; set; }
+        public int OverlayOpacity { get; set; }
         public bool Flip { get; set; }
         public string EffectMode { get; set; }
         public string WallpaperFormat { get; set; }

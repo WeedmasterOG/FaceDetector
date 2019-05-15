@@ -14,6 +14,7 @@ namespace FaceRecog
         {
             @"de\MetriCam.resources.dll",
             @"en\MetriCam.resources.dll",
+            @"other\BlankOverlay.png",
             @"other\haarcascade_frontalface_default.xml",
             @"other\Swastika.png",
             @"x64\concrt140.dll",

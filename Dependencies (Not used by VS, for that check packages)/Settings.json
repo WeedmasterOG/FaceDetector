@@ -1,6 +1,8 @@
 {
 	"AddedBrightness": 0,
 	"AddedSharpness": 1,
+	"Overlay": "",
+	"OverlayOpacity": 100,
 	"Flip": false,
 	"EffectMode": "normal",
 	"WallpaperFormat": "stretch",

@@ -57,8 +57,7 @@ namespace FaceRecog
                 if (Trys > 1) // 3 times
                 {
                     Thread.Sleep(100);
-                    Console.WriteLine();
-                    CConsole.Write("ERROR: Too many tries", Color.DarkRed);
+                    CConsole.Write("ERROR: Too many tries", Color.Red);
                     Thread.Sleep(1500);
                     Environment.Exit(0);
                 }

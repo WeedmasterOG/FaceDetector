@@ -18,6 +18,13 @@ namespace FaceRecog
                 // Format
                 ISupportedImageFormat format = new PngFormat { Quality = 100 };
 
+                // So you dont need to mention the BlankOverlay file in the settings
+                if (Globals.Settings.Overlay == "")
+                {
+                    Globals.Settings.Overlay = @"other\BlankOverlay.png";
+                    Globals.Settings.OverlayOpacity = 0;
+                }
+
                 // Effects getting applied
                 using (MemoryStream inStream = new MemoryStream(BitmapTobyte(Globals.ImageBitmap)))
                 {
@@ -33,17 +40,14 @@ namespace FaceRecog
                                     imageFactory.Load(inStream)
                                                 .Format(format)
                                                 .Flip(Globals.Settings.Flip)
-                                                /*.Overlay(new ImageLayer()
+                                                .Overlay(new ImageLayer()
                                                 {
-                                                    Image = Image.FromFile(@"other\Example.png"),
-                                                    Opacity = 75
-                                                })*/
+                                                    Image = Image.FromFile(Globals.Settings.Overlay),
+                                                    Opacity = Globals.Settings.OverlayOpacity
+                                                })
 
                                                 .GaussianSharpen(Globals.Settings.AddedSharpness)
                                                 .Brightness(Globals.Settings.AddedBrightness)
-                                                //.Filter(MatrixFilters.Lomograph)
-                                                //.Tint()
-                                                //.Vignette(Color.Red)
                                                 .Save(outStream);
                                     break;
                                 case "pedo":
