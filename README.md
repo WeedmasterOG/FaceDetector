@@ -18,9 +18,9 @@ Program settings, Remove all the comments before using.
 	"AddedBrightness": 0,          // Adds brightness
 	"AddedSharpness": 1,           // Adds sharpness
 	"Flip": false,                 // Flips the image
-	"EffectMode": "normal",        // Adds different effects. example: normal, pedo, nazi.
-	"WallpaperFormat": "stretch",  // Wallpaper format, example: fit, fill, stretch.
-	"CameraToUse": 0,              // Choose what camera to use. Only change if you have multiple
+	"EffectMode": "normal",        // Adds different effects. example: normal, pedo, nazi
+	"WallpaperFormat": "stretch",  // Wallpaper format, example: fit, fill, stretch
+	"CameraToUse": 0,              // Choose what camera to use. Only change if you have multiple connected
 	"KeepOutputImage": false,      // keeps the image after exiting in the form of Image.png
 	"ExitAfterCompletion": true,   // Exits after running
 	"VerboseErrorOutput": false,   // Displays the raw exception data instead of just "ERROR: ..."
