@@ -6,6 +6,7 @@
 	"Flip": false,
 	"EffectMode": "normal",
 	"WallpaperFormat": "stretch",
+	"CameraToUse": 0,
 	"KeepOutputImage": false,
 	"ExitAfterCompletion": true,
 	"VerboseErrorOutput": false,

@@ -11,8 +11,13 @@ namespace FaceRecog
         {
             try
             {
-                CConsole.Write("Connecting to camera", Color.SpringGreen);
                 WebCam camera = new WebCam();
+
+                CConsole.Write("Scanning for cameras", Color.SpringGreen);
+                camera.SetSerialNumberToConnect(
+                    WebCam.ScanForCameras()[Globals.Settings.CameraToUse]);
+
+                CConsole.Write("Connecting to camera", Color.SpringGreen);
                 camera.Connect();
 
                 // Throw exeption erly
@@ -39,7 +44,7 @@ namespace FaceRecog
             }
             catch (Exception ex)
             {
-                CConsole.Write("ERROR: Failed to connect/take image from camera", Color.Red);
+                CConsole.Write("ERROR: Failed to detect/connect/take image from camera", Color.Red);
                 VerboseExceptionOutput.WriteExep(ex);
             }
         }

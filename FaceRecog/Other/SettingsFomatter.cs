@@ -31,6 +31,7 @@ namespace FaceRecog
         public bool Flip { get; set; }
         public string EffectMode { get; set; }
         public string WallpaperFormat { get; set; }
+        public int CameraToUse { get; set; }
         public bool KeepOutputImage { get; set; }
         public bool ExitAfterCompletion { get; set; }
         public bool VerboseErrorOutput { get; set; }

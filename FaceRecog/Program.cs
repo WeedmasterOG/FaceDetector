@@ -37,7 +37,6 @@ namespace FaceRecog
             // Load settings
             Globals.Settings = Globals.Settings.DeserializeSettings(File.ReadAllText("Settings.json"));
 
-
             bool IsFaceDetected = false;
             int Trys = 0;
 
