@@ -20,6 +20,7 @@ Program settings, Remove all the comments before using.
 	"Flip": false,                 // Flips the image
 	"EffectMode": "normal",        // Adds different effects. example: normal, pedo, nazi.
 	"WallpaperFormat": "stretch",  // Wallpaper format, example: fit, fill, stretch.
+	"CameraToUse": 0,              // Choose what camera to use. Only change if you have multiple
 	"KeepOutputImage": false,      // keeps the image after exiting in the form of Image.png
 	"ExitAfterCompletion": true,   // Exits after running
 	"VerboseErrorOutput": false,   // Displays the raw exception data instead of just "ERROR: ..."
