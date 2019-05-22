@@ -37,6 +37,9 @@ namespace FaceRecog
             // Load settings
             Globals.Settings = Globals.Settings.DeserializeSettings(File.ReadAllText("Settings.json"));
 
+            CConsole.Write("Detecting camera(s)", Color.SpringGreen);
+            Camera.DetectCameras();
+
             bool IsFaceDetected = false;
             int Trys = 0;
 

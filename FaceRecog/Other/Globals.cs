@@ -8,6 +8,8 @@ namespace FaceRecog
     {
         public static Bitmap ImageBitmap;
 
+        public static List<string> CamSerials = new List<string>();
+
         public static SettingsFomatter Settings = new SettingsFomatter();
 
         public static List<string> FileNames = new List<string>

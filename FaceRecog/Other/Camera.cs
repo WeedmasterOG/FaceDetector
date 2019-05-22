@@ -12,13 +12,12 @@ namespace FaceRecog
             try
             {
                 WebCam camera = new WebCam();
-
-                CConsole.Write("Scanning for cameras", Color.SpringGreen);
-                camera.SetSerialNumberToConnect(
-                    WebCam.ScanForCameras()[Globals.Settings.CameraToUse]);
+                camera.SetSerialNumberToConnect(Globals.CamSerials[Globals.Settings.CameraToUse]);
 
                 CConsole.Write("Connecting to camera", Color.SpringGreen);
                 camera.Connect();
+
+                CConsole.Write("Taking test image", Color.SpringGreen);
 
                 // Throw exeption erly
                 // make output look good/normal
@@ -44,7 +43,42 @@ namespace FaceRecog
             }
             catch (Exception ex)
             {
-                CConsole.Write("ERROR: Failed to detect/connect/take image from camera", Color.Red);
+                CConsole.Write("ERROR: Failed to connect/take image from camera", Color.Red);
+                VerboseExceptionOutput.WriteExep(ex);
+            }
+        }
+
+        public static void DetectCameras()
+        {
+            try
+            {
+                CConsole.Write("Scanning for cameras", Color.SpringGreen);
+
+                // Will throw an exception if return is null or empty(sometimes)
+                Globals.CamSerials.AddRange(WebCam.ScanForCameras());
+
+                // Doubble check list size, catch anything that AddRange dosnt and throw exception
+                if (Globals.CamSerials.Count == 0)
+                {
+                    throw new Exception("Failed to detect camera(s)");
+                }
+
+                // Check all items in list, just incase the two methods above didnt catch anything
+                // if camera serial size is unresonable, throw exception 
+                foreach (string CamSerial in Globals.CamSerials)
+                {
+                    if (CamSerial.Length < 2)
+                    {
+                        throw new Exception("Failed to detect camera(s)");
+                    }
+                }
+
+                // Make sure the serials are always in the same order
+                Globals.CamSerials.Sort();
+            }
+            catch (Exception ex)
+            {
+                CConsole.Write("ERROR: Failed to detect camera(s)", Color.Red);
                 VerboseExceptionOutput.WriteExep(ex);
             }
         }
