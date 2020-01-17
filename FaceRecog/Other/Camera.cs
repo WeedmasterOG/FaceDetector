@@ -7,6 +7,11 @@ namespace FaceRecog
 {
     class Camera
     {
+        /*
+        * Note:
+        * Capture class is only available in windows form apps,
+        * therefore im using the MetriCam lib.
+        */
         public static void TakePhoto()
         {
             try
@@ -22,7 +27,6 @@ namespace FaceRecog
                 // Throw exeption erly
                 // make output look good/normal
                 // resolve any first time image issues
-                // under the hood, dont need to output whats going on
                 Globals.ImageBitmap = camera.GetBitmap();
 
                 CConsole.Write("Letting camera calibrate itself", Color.SpringGreen);
@@ -31,7 +35,7 @@ namespace FaceRecog
                 // added an extra 500 - 1000 ms for slower machines
                 Thread.Sleep(2500);
 
-                CConsole.Write("Taking image", Color.SpringGreen);
+                CConsole.Write("Taking main image", Color.SpringGreen);
 
                 // take image a second time, write to same bitmap
                 Globals.ImageBitmap = camera.GetBitmap();
